@@ -1,0 +1,8 @@
+target 'testDemo' do
+
+pod 'AFNetworking'
+
+
+end
+
+

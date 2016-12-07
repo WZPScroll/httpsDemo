@@ -17,7 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    [self request];
+    
 }
+
+
+- (void)request{
+
+    NSLog(@"输出");
+
+
+}
+
 
 
 - (void)didReceiveMemoryWarning {
