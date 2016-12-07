@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "HttpsNetworking.h"
 
 @interface ViewController ()
 
@@ -25,7 +26,23 @@
 
 - (void)request{
 
-    NSLog(@"输出");
+    NSLog(@"就这么用,其他的没什么变化,post请求也一样");
+    
+    HttpsNetworking * manager = [HttpsNetworking getManager];
+    
+    [manager GET:@"https://你的地址" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSLog(@"%@",responseObject);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+        NSLog(@"%@",error);
+        
+    }];
+    
+    
+    
 
 
 }
